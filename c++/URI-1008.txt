@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numero, horas;
+    double valor_horas;
+    cin >> numero >> horas >> valor_horas;
+    cout << "NUMBER = " << numero << "\n";
+    printf("SALARY = U$ %.2f\n", horas*valor_horas);
+    return 0;
+}

@@ -1,0 +1,3 @@
+SELECT 'Approved: '||name, grade FROM students
+WHERE students.grade >= 7.0
+ORDER BY grade DESC;

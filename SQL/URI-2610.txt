@@ -1,0 +1,1 @@
+SELECT round(SUM(price)/MAX(id), 2) FROM products;

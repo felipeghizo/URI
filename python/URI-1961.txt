@@ -1,0 +1,21 @@
+P, N = input().split(" ")
+N = int(N)
+P = int(P)
+canos = input().split(" ")
+lista = []
+for i in range(N):
+    lista.append(int(canos[i]))
+
+win = True
+for i in range(len(lista)-1):
+    if (lista[i] <= lista[i + 1] <= lista[i] + int(P)) or \
+       (lista[i] >= lista[i+1] and lista[i] - lista[i+1] <= P):
+        win = True
+    else:
+        win = False
+        break
+
+if win:
+    print("YOU WIN")
+else:
+    print("GAME OVER")

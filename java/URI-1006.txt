@@ -1,0 +1,20 @@
+import java.io.IOException;
+import java.util.Scanner;
+ 
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+        Scanner input = new Scanner(System.in);
+        
+        double A = input.nextDouble()*2;
+        double B = input.nextDouble()*3;
+        double C = input.nextDouble()*5;
+        
+        input.close();
+        
+        System.out.printf("MEDIA = %.1f%n", ((A+B+C)/10));
+ 
+    }
+ 
+}

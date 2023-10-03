@@ -1,0 +1,5 @@
+SELECT customers.name FROM customers
+RIGHT JOIN legal_person ON 
+legal_person.id_customers = customers.id
+WHERE 
+legal_person.id_customers = customers.id;

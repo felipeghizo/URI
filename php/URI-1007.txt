@@ -1,0 +1,11 @@
+<?php
+
+    $A = (int) fgets(STDIN);
+    $B = (int) fgets(STDIN);
+    $C = (int) fgets(STDIN);
+    $D = (int) fgets(STDIN);
+    
+    $DIF = ($A*$B)-($C*$D);
+    echo "DIFERENCA = " . $DIF . "\n";
+
+?>

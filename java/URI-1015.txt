@@ -1,0 +1,24 @@
+import java.io.IOException;
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+        Scanner input = new Scanner(System.in);
+        
+        double X1 = input.nextDouble();
+        double Y1 = input.nextDouble();
+        double X2 = input.nextDouble();
+        double Y2 = input.nextDouble();
+ 
+        input.close();
+        
+        double dist = Math.sqrt(((Math.pow((X1 - X2),2)+Math.pow((Y1 - Y2), 2))));
+        
+        System.out.println(String.format("%.4f", dist));
+
+    }
+ 
+}

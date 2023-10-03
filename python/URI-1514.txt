@@ -1,0 +1,45 @@
+while True:
+    cont = 0
+    N, M = input().split(" ")
+    N = int(N)
+    M = int(M)
+
+    if N == M == 0:
+        break
+
+    lista = []
+    for i in range(N):
+        part = input().split(" ")
+        lista.append(part)
+    prob = []
+    for j in range(M):
+        prob.append([])
+        for i in range(N):
+            prob[j].append(lista[i][j])
+
+    ok1 = True
+    ok2 = True
+    ok3 = True
+    ok4 = True
+    for i in range(N):
+        if '0' not in lista[i]:
+            ok1 = False
+        if '1' not in lista[i]:
+            ok4 = False
+
+    for i in range(M):
+        if '0' not in prob[i]:
+            ok3 = False
+        if '1' not in prob[i]:
+            ok2 = False
+
+    if ok1:
+        cont += 1
+    if ok2:
+        cont += 1
+    if ok3:
+        cont += 1
+    if ok4:
+        cont += 1
+
+    print(cont)

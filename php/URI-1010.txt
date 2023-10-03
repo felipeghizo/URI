@@ -1,0 +1,13 @@
+<?php
+
+    $produto1 = explode(" ", fgets(STDIN));
+    $produto2 = explode(" ", fgets(STDIN));
+    
+    $qntd1 = (int) $produto1[1];
+    $preco1 = floatval($produto1[2]);
+    $qntd2 = (int) $produto2[1];
+    $preco2 = floatval($produto2[2]);
+    
+    echo "VALOR A PAGAR: R$ " . number_format($qntd1*$preco1+$qntd2*$preco2, 2, ".", "") . "\n";
+
+?>

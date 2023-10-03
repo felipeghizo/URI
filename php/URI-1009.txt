@@ -1,0 +1,10 @@
+<?php
+
+    $nome = fgets(STDIN);
+    $salario = Floatval(fgets(STDIN));
+    $vendas = Floatval(fgets(STDIN));
+    
+    $bonus = (($vendas*15)/100);
+    echo "TOTAL = R$ " . number_format($bonus+$salario, 2, ".", "") . "\n";
+
+?>

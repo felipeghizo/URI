@@ -1,0 +1,19 @@
+N, M = input().split(" ")
+postos = input().split(" ")
+N = int(N)
+M = int(M)
+
+ok = True
+lista = []
+for i in range(N):
+    lista.append(int(postos[i]))
+lista.append(42195)
+for i in range(len(lista)-1):
+    if lista[i] + M < lista[i+1]:
+        ok = False
+        break
+
+if ok:
+    print("S")
+else:
+    print("N")

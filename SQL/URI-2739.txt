@@ -1,0 +1,3 @@
+SELECT name,
+to_number(to_char(payday, 'dd'), '99') AS day
+FROM loan;

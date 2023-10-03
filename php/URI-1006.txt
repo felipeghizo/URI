@@ -1,0 +1,11 @@
+<?php
+
+    $A = floatval(fgets(STDIN));
+    $B = floatval(fgets(STDIN));
+    $C = floatval(fgets(STDIN));
+    
+    $MEDIA = (($A*2)+($B*3)+($C*5))/10;
+    
+    echo "MEDIA = " . number_format($MEDIA, 1) . "\n";
+
+?>

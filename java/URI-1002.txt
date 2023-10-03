@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+	public class Main {
+
+ 		public static void main(String[] args){
+ 		    
+ 		    Scanner input = new Scanner(System.in);
+
+ 			double num1 = input.nextDouble();
+ 			
+ 			input.close();
+ 			
+ 			double pi = 3.14159;
+
+ 			double area = (num1*num1)*pi;
+
+ 			System.out.printf("A=%.4f%n",  area);
+
+ 		}
+
+
+ 	}

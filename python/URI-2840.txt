@@ -1,0 +1,8 @@
+# -*- coding: utf-8 -*-
+infos = input().split(" ")
+R = int(infos[0])
+L = int(infos[1])
+
+volume_balao = (4/3) * ((R**3)*3.1415)
+
+print(int(L/volume_balao))

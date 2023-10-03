@@ -1,0 +1,37 @@
+T = int(input())
+solucao = []
+for i in range(T):
+    dados = input().split(" ")
+    dimensao = int(dados[0])
+    reais = int(dados[1])
+    lista = []
+    for j in range(reais):
+        lista.append(input().split(" "))
+
+    lista2 = []
+    cont = 1
+    for x in range(reais):
+        for y in range(cont, reais):
+            if lista[x][1] == lista[y][1] and lista[x][2] == lista[y][2]:
+                lista2.append([lista[x][1], lista[x][2], str(int(lista[x][3])+int(lista[y][3]))])
+        cont += 1
+
+    ok = False
+    for x in range(reais):
+        for y in range(len(lista2)):
+            if lista[x][1] not in lista2[y] or lista[x][2] not in lista2[y]:
+                ok = True
+            else:
+                ok = False
+                break
+        if ok:
+            lista2.append([lista[x][1], lista[x][2], lista[x][3]])
+
+    lista2.sort()
+    for j in range(len(lista2)):
+        minhaString = " ".join(lista2[j])
+        solucao.append(minhaString)
+    solucao.append("")
+
+for i in range(len(solucao)-1):
+    print(solucao[i])

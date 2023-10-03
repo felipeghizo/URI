@@ -1,0 +1,12 @@
+<?php
+
+    $num = (int) fgets(STDIN);
+    $horas = (int) fgets(STDIN);
+    $valorhoras = Floatval(fgets(STDIN));
+    
+    $SALARY = ($horas*$valorhoras);
+    
+    echo "NUMBER = " . $num . "\n";
+    echo "SALARY = U$ " . number_format($SALARY, 2, '.','') . "\n";
+
+?>

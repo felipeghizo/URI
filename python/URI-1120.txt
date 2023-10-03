@@ -1,0 +1,43 @@
+while True:
+    D, N = input().split(" ")
+    D = int(D)
+    if N == '0' and D == 0:
+        break
+
+    lista = []
+    apagar = []
+    for i in range(len(N)):
+        lista.append(int(N[i]))
+
+    for i in range(len(lista)-1):
+        if lista[i] == D:
+            apagar.append(i)
+
+    apagar_zero = False
+    for i in range(len(lista)-1):
+        if lista[i] == 0 or lista[i] == D:
+            apagar_zero = True
+        elif lista[i] != 0 and lista[i] != D:
+            apagar_zero = False
+            break
+        if lista[i] == 0 and apagar_zero:
+            apagar.append(i)
+
+    for i in range(len(apagar)-1, -1, -1):
+        lista.pop(apagar[i])
+    if lista[len(lista)-1] == D:
+        lista.pop(len(lista)-1)
+
+    if not lista:
+        lista.append(0)
+
+    lista2 = []
+    for i in range(len(lista)):
+        lista2.append(str(lista[i]))
+
+    minhaString = "".join(lista2)
+    print(minhaString)
+
+
+
+
