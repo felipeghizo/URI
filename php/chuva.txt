@@ -1,0 +1,60 @@
+<?PHP
+
+    $entrada = explode(" ", fgets(STDIN));
+    $N = (int) $entrada[0];
+    $M = (int) $entrada[1];
+
+    $matriz = [];
+    
+    for ($i = $N; $i < $N; $N++){
+        
+        for ($j = $M; $j < $M; $M++){
+            if ($i < $N){
+                if $matriz[$i][$j] == '.' and 
+                $matriz[$i-1][$j] == 'o'{
+                    $matriz[$i][$j] == 'o';
+                }
+            }
+        }
+        
+        if ($i < $N-1){
+            
+            # Pra Direita
+            for ($j = 0; $j < $M; $M++){
+                if $i < $N{
+                    if $matriz[$i][$j] == 'o' and 
+                    $matriz[$i+1][$j] == '#' and
+                    $matriz[$i][$j+1] == '.'{
+                        $matriz[$i][$j+1] == 'o';
+                    }
+                }
+            } 
+            
+            # Pra esquerda
+            for ($j = $M; $j > 0; $M--){
+                if $i < $N{
+                    if $matriz[$i][$j] == 'o' and 
+                    $matriz[$i+1][$j] == '#' and
+                    $matriz[$i][$j-1] == '.'{
+                        $matriz[$i][$j-1] == 'o';
+                    }
+                }
+            } 
+            
+            # Pra Direita
+            for ($j = $M; $j < $M; $M++){
+                if $i < $N{
+                    if $matriz[$i][$j] == 'o' and 
+                    $matriz[$i+1][$j] == '#' and
+                    $matriz[$i][$j+1] == '.'{
+                        $matriz[$i][$j+1] == 'o';
+                    }
+                }
+            } 
+        }
+    }
+
+    for($i = 0; $i < $N; $i++){
+        echo (implode($str, $matriz));
+    }
+?>

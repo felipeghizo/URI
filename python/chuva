@@ -1,0 +1,10 @@
+<?PHP
+
+    $entrada = explode(" ", fgets(STDIN));
+    $N = (int) $entrada[1];
+    $N = (int) $entrada[2];
+
+    echo $N;
+    echo $M;
+
+?>
