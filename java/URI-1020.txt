@@ -1,0 +1,39 @@
+import java.io.IOException;
+import java.util.Scanner;
+ 
+/**
+ * IMPORTANT: 
+ *      O nome da classe deve ser "Main" para que a sua solução execute
+ *      Class name must be "Main" for your solution to execute
+ *      El nombre de la clase debe ser "Main" para que su solución ejecutar
+ */
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+        Scanner input = new Scanner(System.in);
+            int A = input.nextInt();
+        input.close();
+        
+        int dias = 0;
+        int meses = 0;
+        int anos = 0;
+        
+        dias = A;
+        while (dias > 29){
+            if (dias > 365){
+                anos = dias/365;
+                dias -= anos*365;
+            }
+            if (dias > 29){
+                meses = dias/30;
+                dias -= 30*meses;
+            }
+        }
+        System.out.println(anos +" ano(s)");
+        System.out.println(meses +" mes(es)");
+        System.out.println(dias +" dia(s)");
+    
+    }
+ 
+}

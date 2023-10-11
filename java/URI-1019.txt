@@ -1,0 +1,35 @@
+import java.io.IOException;
+import java.util.Scanner;
+ 
+/**
+ * IMPORTANT: 
+ *      O nome da classe deve ser "Main" para que a sua solução execute
+ *      Class name must be "Main" for your solution to execute
+ *      El nombre de la clase debe ser "Main" para que su solución ejecutar
+ */
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+        Scanner input = new Scanner(System.in);
+        int A = input.nextInt();
+        input.close();
+        int horas = 0;
+        int minutos = 0;
+        int segundos = 0;
+        
+        if (A > 59){
+            minutos = A/60;
+            segundos = A%60;
+        } 
+        else {
+            segundos = A;
+        }
+        if (minutos > 59){
+            horas = minutos/60;
+            minutos = minutos%60;
+        }
+        
+        System.out.println(horas + ":" + minutos + ":" + segundos);
+    }
+}
