@@ -1,0 +1,7 @@
+<?php
+    $seconds = intval(fgets(STDIN));
+    
+    $minutes =  intval($seconds/60);
+    $hours = intval($minutes/60);
+    print($hours . ":" . intval($minutes%60) . ":" . intval($seconds%60) . "\n");
+?>

@@ -1,0 +1,7 @@
+<?php
+    $days = intval(fgets(STDIN));
+
+    print(intval($days/365) . " ano(s)" . "\n" .
+          intval(($days%365)/30) . " mes(es)" . "\n" .
+          intval(($days%365)%30) . " dia(s)" . "\n");
+?>

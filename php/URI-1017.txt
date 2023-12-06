@@ -1,0 +1,6 @@
+<?php
+    $distancia = intval(fgets(STDIN));
+    $litros = intval(fgets(STDIN));
+    
+    print(number_format($distancia*$litros/12, 3, '.', '') . "\n");
+?>
