@@ -1,0 +1,11 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+    int radius;
+    cin >> radius;
+
+    printf("VOLUME = %.3f\n", ((4.0/3.0)*3.14159*pow(radius,3)));
+    return 0;
+}

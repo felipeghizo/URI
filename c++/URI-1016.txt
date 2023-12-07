@@ -1,0 +1,11 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int dist;
+    cin >> dist;
+    
+    printf("%d minutos\n", 60*dist/30);
+    return 0;
+}

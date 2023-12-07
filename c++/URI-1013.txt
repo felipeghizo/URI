@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int A, B, C, bigger;
+    cin >> A >> B >> C;
+    
+    bigger = ((A+B+abs(A-B))/2);
+    bigger = ((bigger+C+abs(bigger-C))/2);
+    printf("%d eh o maior\n", bigger);
+    return 0;
+}
