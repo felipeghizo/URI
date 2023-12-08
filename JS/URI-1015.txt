@@ -1,0 +1,8 @@
+const input = require('fs').readFileSync('/dev/stdin', 'utf8');
+
+const val = input.split("\n");
+
+const [X1, Y1] = val[0].split(" ");
+const [X2, Y2] = val[1].split(" ");
+
+console.log(Math.sqrt(Math.pow((X2-X1), 2)+Math.pow((Y2-Y1), 2)).toFixed(4));

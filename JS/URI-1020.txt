@@ -1,0 +1,8 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+var days = parseInt(lines.shift());
+
+console.log(parseInt(days/365)+" ano(s)");
+console.log(parseInt((days%365)/30)+" mes(es)");
+console.log(parseInt((days%365)%30)+" dia(s)");

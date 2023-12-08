@@ -1,0 +1,8 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+var seconds = parseInt(lines.shift());
+
+console.log(parseInt(seconds/60/60)+":"+
+            parseInt(seconds/60%60)+":"+
+            parseInt(seconds%60%60));
