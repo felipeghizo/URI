@@ -1,0 +1,65 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        
+        Scanner input = new Scanner(System.in);
+        String SubFilo = input.next();
+        String Classe = input.next();
+        String Ordem = input.next();
+        input.close();
+        
+        switch (SubFilo){
+            case "vertebrado":
+                switch (Classe){
+                    case "ave":
+                        switch (Ordem){
+                            case "carnivoro":
+                                System.out.println("aguia");
+                                break;
+                            case "onivoro":
+                                System.out.println("pomba");
+                                break;
+                        }
+                        break;
+                    case "mamifero":
+                        switch (Ordem){
+                            case "onivoro":
+                                System.out.println("homem");
+                                break;
+                            case "herbivoro":
+                                System.out.println("vaca");
+                                break;
+                        }
+                        break;
+                }
+                break;
+            case "invertebrado":
+                switch (Classe){
+                    case "inseto":
+                        switch (Ordem){
+                            case "hematofago":
+                                System.out.println("pulga");
+                                break;
+                            case "herbivoro":
+                                System.out.println("lagarta");
+                                break;
+                        }
+                        break;
+                    case "anelideo":
+                        switch (Ordem){
+                            case "hematofago":
+                                System.out.println("sanguessuga");
+                                break;
+                            case "onivoro":
+                                System.out.println("minhoca");
+                                break;
+                        }
+                        break;
+                }
+                break;
+
+        }
+    }
+}
