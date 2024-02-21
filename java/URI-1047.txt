@@ -1,0 +1,38 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        
+        Scanner input = new Scanner(System.in);
+        int HoraInicial = input.nextInt();
+        int MinutoInicial = input.nextInt();
+        int HoraFinal = input.nextInt();
+        int MinutoFinal = input.nextInt();
+        input.close();
+        
+        int horas = 0;
+        int minutos = 0;
+        
+        if (MinutoInicial > MinutoFinal){minutos = 60 - MinutoInicial + MinutoFinal;}
+        else if (MinutoInicial < MinutoFinal){minutos = MinutoFinal - MinutoInicial;}
+        else{minutos = 0;}
+        
+        if (HoraInicial > HoraFinal){
+            if (MinutoInicial > MinutoFinal){horas = 23 - HoraInicial + HoraFinal;}
+            else if (MinutoInicial < MinutoFinal){horas = 24 - HoraInicial + HoraFinal;}
+        }
+        else if (HoraInicial < HoraFinal){
+            if (MinutoInicial < MinutoFinal){horas = HoraFinal - HoraInicial;}
+            else if (MinutoInicial > MinutoFinal && HoraFinal - HoraInicial == 1){horas = 0;}
+            else if (MinutoInicial > MinutoFinal && HoraFinal - HoraInicial != 1){horas = HoraFinal - HoraInicial - 1;}
+        }
+        else if (HoraInicial == HoraFinal){
+            if(MinutoInicial > MinutoFinal){horas = 23;}
+            else if (MinutoInicial < MinutoFinal){horas = 0;}
+        }
+        
+        if (horas == 0 && minutos == 0){horas = 24;}
+        System.out.println("O JOGO DUROU " + horas + " HORA(S) E " + minutos + " MINUTO(S)");
+    }
+}

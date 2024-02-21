@@ -1,0 +1,18 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        
+        Scanner input = new Scanner(System.in);
+        int A = input.nextInt();
+        int B = input.nextInt();
+        input.close();
+        
+        int tempo = 0;
+        if (A>B){tempo = 24-A+B;}
+        else if (A<B){tempo = B-A;}
+        else{tempo = 24;}
+        System.out.println("O JOGO DUROU " + tempo + " HORA(S)");
+    }
+}
