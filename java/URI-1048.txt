@@ -1,0 +1,24 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        
+        Scanner input = new Scanner(System.in);
+        double sal = input.nextDouble();
+        input.close();
+        
+        double reajuste = 0;
+        int porcentagem = 0;
+        
+        if (sal < 400.01){reajuste = ((sal*15)/100); porcentagem = 15;}
+        else if(400.01 <= sal && sal < 800.01){reajuste = ((sal*12)/100); porcentagem = 12;}
+        else if(800.01 <= sal && sal < 1200.01){reajuste = ((sal*10)/100); porcentagem = 10;}
+        else if(1200.01 <= sal && sal < 2000.01){reajuste = ((sal*7)/100); porcentagem = 7;}
+        else{reajuste = ((sal*4)/100); porcentagem = 4;}
+
+        sal += reajuste;
+
+        System.out.println("Novo salario: "+String.format("%.2f", sal)+"\nReajuste ganho: "+String.format("%.2f", reajuste)+"\nEm percentual: "+porcentagem+" %");
+    }
+}
