@@ -1,0 +1,46 @@
+import java.util.Scanner;
+import java.io.IOException;
+
+public class Main{
+    public static void main(String[] args) throws IOException{
+        
+        Scanner input = new Scanner(System.in);
+        //Inicio
+        String dia = input.next();
+        int dia_inicial = input.nextInt();
+        int hora_inicial = input.nextInt();
+        String dois_pontos1 = input.next();
+        int minuto_inicial = input.nextInt();
+        String dois_pontos2 = input.next();
+        int segundo_inicial = input.nextInt();
+        //---fim inicio
+        //final
+        String dia_ = input.next();
+        int dia_final = input.nextInt();
+        int hora_final = input.nextInt();
+        String dois_pontos1_ = input.next();
+        int minuto_final = input.nextInt();
+        String dois_pontos2_ = input.next();
+        int segundo_final = input.nextInt();
+        //---fim final
+        input.close();
+    
+        int Inicial = 0;
+        int Final = 0;
+        
+        Inicial = (dia_inicial*24*60*60)+(hora_inicial*60*60)+(minuto_inicial*60)+segundo_inicial;
+        Final = (dia_final*24*60*60)+(hora_final*60*60)+(minuto_final*60)+segundo_final;
+        Final -= Inicial;
+        
+        int tempo_dias = Final/(24*60*60);
+        int tempo_horas = (Final%(24*60*60))/60/60;
+        int tempo_minutos = ((Final%(24*60*60))/60)%60;
+        int tempo_segundos = (Final%(24*60*60))%60%60;
+        
+        System.out.println(tempo_dias+ " dia(s)");
+        System.out.println(tempo_horas+ " hora(s)");
+        System.out.println(tempo_minutos+ " minuto(s)");
+        System.out.println(tempo_segundos+ " segundo(s)");
+        
+    }
+}
