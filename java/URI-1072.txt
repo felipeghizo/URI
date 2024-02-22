@@ -1,0 +1,25 @@
+import java.util.Scanner;
+import java.io.IOException;
+
+public class Main{
+    public static void main(String[] args) throws IOException{
+        
+        Scanner input = new Scanner(System.in);
+        int num1 = input.nextInt();
+        int[] numeros = new int[num1];
+        for(int i = 0; i<num1; i++){
+            numeros[i] = input.nextInt();
+        }
+        input.close();
+    
+        int in = 0;
+        int out = 0;
+        for(int i = 0; i<num1; i++){
+            if(numeros[i] >= 10 && numeros[i] <= 20){in ++;}
+            else{out ++;}
+        } 
+        
+        System.out.println(in + " in");
+        System.out.println(out + " out");
+    }
+}

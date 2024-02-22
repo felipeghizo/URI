@@ -1,0 +1,22 @@
+import java.util.Scanner;
+import java.io.IOException;
+
+public class Main{
+    public static void main(String[] args) throws IOException{
+        Scanner input = new Scanner(System.in);
+        Double num1 = input.nextDouble();
+        Double num2 = input.nextDouble();
+        Double num3 = input.nextDouble();
+        Double num4 = input.nextDouble();
+        Double num5 = input.nextDouble();
+        input.close();
+        Double[] num = {num1, num2, num3, num4, num5};
+        
+        int cont = 0;
+        for(int i = 0; i<=4; i++){
+            if (num[i]%2 == 0){cont ++;}
+        }
+        
+        System.out.println(cont + " valores pares");
+    }
+}

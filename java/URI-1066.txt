@@ -1,0 +1,29 @@
+import java.util.Scanner;
+import java.io.IOException;
+
+public class Main{
+    public static void main(String[] args) throws IOException{
+        Scanner input = new Scanner(System.in);
+        int num1 = input.nextInt();
+        int num2 = input.nextInt();
+        int num3 = input.nextInt();
+        int num4 = input.nextInt();
+        int num5 = input.nextInt();
+        input.close();
+        int[] num = {num1, num2, num3, num4, num5};
+        
+        int par = 0;
+        int impar = 0;
+        int pos = 0;
+        int neg = 0;
+        for(int i = 0; i<=4; i++){
+            if (num[i]%2 == 0){par ++;}else{impar ++;}
+            if (num[i] > 0){pos ++;}else if(num[i] < 0){neg ++;}
+        }
+        
+        System.out.println(par + " valor(es) par(es)");
+        System.out.println(impar + " valor(es) impar(es)");
+        System.out.println(pos + " valor(es) positivo(s)");
+        System.out.println(neg + " valor(es) negativo(s)");
+    }
+}
