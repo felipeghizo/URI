@@ -1,0 +1,43 @@
+import java.util.Scanner;
+import java.io.IOException;
+
+public class Main{
+    public static void main(String[] args) throws IOException{
+        
+        Double cobaias = 0.0;
+        Double coelhos = 0.0;
+        Double sapos = 0.0;
+        Double ratos = 0.0;
+        
+        Scanner input = new Scanner(System.in);
+        int N = input.nextInt();
+        for (int i = 0; i < N; i++){
+            int Quantia = input.nextInt();
+            cobaias += Quantia;
+            String Tipo = input.next();
+            switch (Tipo){
+                case "C":
+                    coelhos += Quantia;
+                    break;
+                
+                case "R":
+                    ratos += Quantia;
+                    break;
+                
+                case "S":
+                    sapos += Quantia;
+                    break;
+            }
+        }
+        input.close();
+        
+        System.out.println("Total: "+String.format("%.0f", cobaias)+" cobaias");
+        System.out.println("Total de coelhos: "+String.format("%.0f", coelhos));
+        System.out.println("Total de ratos: "+String.format("%.0f", ratos));
+        System.out.println("Total de sapos: "+String.format("%.0f", sapos));
+        System.out.println("Percentual de coelhos: "+String.format("%.2f", (((100*coelhos)/cobaias)))+" %");
+        System.out.println("Percentual de ratos: "+String.format("%.2f", (((100*ratos)/cobaias)))+" %");
+        System.out.println("Percentual de sapos: "+String.format("%.2f", (((100*sapos)/cobaias)))+" %");
+        
+    }
+}

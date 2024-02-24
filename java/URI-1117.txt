@@ -1,0 +1,21 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) throws IOException{
+        Scanner input = new Scanner(System.in);
+       
+        int cont = 0;
+        Double som = 0.0;
+        while (true){
+            Double val = input.nextDouble();
+            if(val >= 0 && val <= 10){
+                som += val;
+                cont++;
+            }else{System.out.println("nota invalida");}
+            if (cont == 2){break;}
+        }
+        input.close();
+        System.out.println("media = "+String.format("%.2f", som/2));
+    }
+}

@@ -1,0 +1,16 @@
+import java.io.IOException;
+
+public class Main{
+    public static void main(String[] args) throws IOException{
+        int I = 1;
+        int J = 2;
+        for (int N = 0; N < 5; N++){
+            J += 5;
+            for(int K = 0; K < 3; K++){
+                System.out.println("I="+I+" J="+J);
+                J --;
+            }
+            I += 2;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+import java.io.IOException;
+
+public class Main{
+    public static void main(String[] args) throws IOException{
+        int I = 1;
+        int J = 60;
+        for(int K = 0; K <= 12; K++){
+            System.out.println("I="+I+" J="+J);
+            I += 3;
+            J -= 5;
+        }
+    }
+}

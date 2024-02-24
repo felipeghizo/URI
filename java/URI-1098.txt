@@ -1,0 +1,22 @@
+import java.io.IOException;
+
+public class Main{
+    public static void main(String[] args) throws IOException{
+        Double I = 0.0;
+        Double cont = 0.0;
+        for (int N = 0; N <= 10; N++){
+            cont += 0.2;
+            Double J = 0.8 + cont;
+            for(int K = 0; K < 3; K++){
+                if (N%5 == 0.0){
+                    System.out.println("I="+String.format("%.0f",I)+" J="+String.format("%.0f",J));
+                   
+                }else{
+                    System.out.println("I="+String.format("%.1f",I)+" J="+String.format("%.1f",J));
+                }
+                J ++;
+            }
+            I += 0.2;
+        }
+    }
+}

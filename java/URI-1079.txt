@@ -1,0 +1,16 @@
+import java.util.Scanner;
+import java.io.IOException;
+
+public class Main{
+    public static void main(String[] args) throws IOException{
+        Scanner input = new Scanner(System.in);
+        int N = input.nextInt();
+        for(int i = 0; i < N; i++){
+            Double Num1 = input.nextDouble()*2;
+            Double Num2 = input.nextDouble()*3;
+            Double Num3 = input.nextDouble()*5;
+            System.out.println(String.format("%.1f", ((Num1+Num2+Num3)/10)));
+        }
+        input.close();
+    }
+}
