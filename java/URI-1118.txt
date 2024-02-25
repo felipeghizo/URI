@@ -1,0 +1,27 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) throws IOException{
+        Scanner input = new Scanner(System.in);
+        int info = 1;
+        while (true){
+            Double sum = 0.0;
+            int cont = 0;
+            while(info == 1){
+                Double X = input.nextDouble();
+                if(X>=0 && X <= 10){
+                    sum += X;
+                    cont++;
+                }else{System.out.println("nota invalida");}
+                if(cont == 2){
+                    System.out.println("media = "+String.format("%.2f", sum/2));
+                    break;}
+            }
+            System.out.println("novo calculo (1-sim 2-nao)");
+            info = input.nextInt();
+            if(info == 2){break;}
+        }
+        input.close();
+    }
+}

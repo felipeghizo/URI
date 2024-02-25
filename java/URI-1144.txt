@@ -1,0 +1,19 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) throws IOException{
+        Scanner input = new Scanner(System.in);
+        int X = input.nextInt();
+        for(int i = 1; i <= X; i++){
+            System.out.print(String.format("%.0f", Math.pow(i, 1))+" "
+                            +String.format("%.0f", Math.pow(i, 2))+" "
+                            +String.format("%.0f", Math.pow(i, 3))+"\n");
+            
+            System.out.print(String.format("%.0f", Math.pow(i, 1))+" "
+                            +String.format("%.0f", Math.pow(i, 2)+1)+" "
+                            +String.format("%.0f", Math.pow(i, 3)+1)+"\n");
+        }
+        input.close();
+    }
+}
