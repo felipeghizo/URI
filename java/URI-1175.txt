@@ -1,0 +1,17 @@
+import java.util.Scanner;
+import java.io.IOException;
+
+class Main{
+    public static void main(String[] args) throws IOException{
+        Scanner input = new Scanner(System.in);
+        int[] arr = new int[20];
+        for(int i = 19; i >= 0; i--){
+            arr[i] = input.nextInt();
+        }
+        for(int j = 0; j < 20; j++){
+            System.out.println("N["+j+"] = "+arr[j]);
+            
+        }
+        input.close();
+    }
+}

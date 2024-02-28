@@ -1,0 +1,28 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args) throws IOException{
+        Scanner input = new Scanner(System.in);
+        int N = input.nextInt();
+        int cont = 1;
+        int aux = 0;
+        int sum = 0;
+        for (int i = 0; i < N; i++){
+            if (i == 0){
+                System.out.print(aux+" ");  
+            }else if (i == 1){
+                System.out.print(cont+" ");
+            }else if (i == N-1){ 
+                sum = cont + aux;
+                System.out.println(sum);
+            }else{
+                sum = cont + aux;
+                aux = cont;
+                cont = sum;
+                System.out.print(sum+" ");
+            }
+        }
+        input.close();
+    }
+}

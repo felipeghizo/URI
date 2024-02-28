@@ -1,0 +1,13 @@
+import java.io.IOException;
+
+class Main{
+    public static void main(String[] args) throws IOException{
+        Double S = 1.0;
+        Double result = 0.0;
+        for(int i = 1; i <= 39; i += 2){
+            result += i/S;
+            S *= 2;
+        }
+        System.out.println(String.format("%.2f",(result)));
+    }
+}

@@ -1,0 +1,18 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args) throws IOException{
+        Scanner input = new Scanner(System.in);
+        int cont = 0;
+        Double media = 0.0;
+        while (true){
+            int idade = input.nextInt();
+            if (idade < 0){break;}
+            cont ++;
+            media += idade;
+        }
+        input.close();
+        System.out.println(String.format("%.2f",(media/cont)));
+    }
+}
