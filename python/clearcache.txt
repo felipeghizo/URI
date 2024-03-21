@@ -1,0 +1,19 @@
+import subprocess
+'''This code cleans the Cache from Microsoft Edge'''
+
+# Define the command to be executed in cmd: first change diretory and then delete
+cmd_command_cd_cache = r"cd /d %LocalAppData%\Microsoft\Edge\User Data\Default && del /q /s Cache"
+
+# Execute the command using subprocess
+process = subprocess.Popen(cmd_command_cd_cache, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE)
+
+# Read the output and error streams and decode output and error from bytes to string
+output, error = process.communicate()
+output_str = output.decode("cp1252")
+error_str = error.decode("cp1252")
+
+# Print the output and error
+print("Output:")
+print(output_str)
+print("Error:")
+print(error_str)
