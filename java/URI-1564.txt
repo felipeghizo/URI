@@ -1,0 +1,12 @@
+import java.util.Scanner;
+import java.io.IOException;
+
+class Main {
+    public static void main(String[] args) throws IOException{
+        Scanner input = new Scanner(System.in);
+        while(input.hasNext()){
+            int A = input.nextInt();
+            System.out.println(A==0?"vai ter copa!":"vai ter duas!");
+        }
+    }
+}

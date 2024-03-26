@@ -1,0 +1,16 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int N = input.nextInt();
+        for (int i = 0; i < N; i++){
+            String nome = input.next();
+            int Nt = input.nextInt();
+            if(nome.compareTo("Thor")==0){System.out.println("Y");}
+            else{System.out.println("N");}
+        }
+        input.close();
+    }
+}

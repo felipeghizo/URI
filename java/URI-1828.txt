@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String regra[] = {"tesoura", "papel", "pedra", "lagarto","Spock"};
+        String S, R, res;
+        int S_aux, R_aux;
+        S_aux = 0;
+        R_aux = 0;
+        res = "a";
+        int T = input.nextInt();
+        for(int i = 1; i <= T; i++){
+            S = input.next();
+            R = input.next();
+            for(int j = 0; j < 5; j++){
+                if(S.compareTo(regra[j]) == 0){S_aux = j;}
+                if(R.compareTo(regra[j]) == 0){R_aux = j;}
+            }
+            
+            if(S_aux == R_aux){res = "De novo";}
+            else if((S_aux - R_aux)%2 == 0 && S_aux - R_aux > 0){res = "Bazinga";}
+            else if((S_aux - R_aux)%2 != 0 && S_aux - R_aux > 0){res = "Raj trapaceou";}
+            else if((S_aux - R_aux)%2 != 0 && S_aux - R_aux < 0){res = "Bazinga";}
+            else if((S_aux - R_aux)%2 == 0 && S_aux - R_aux < 0){res = "Raj trapaceou";}
+
+            System.out.println("Caso #"+i+": "+res+"!");
+        }
+    }
+}

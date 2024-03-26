@@ -1,0 +1,24 @@
+import java.util.Scanner;
+import java.io.IOException;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int area;
+        Double aux;
+        while(true){
+            int A = input.nextInt();
+            if (A == 0){break;}
+            int B = input.nextInt();
+            int C = input.nextInt();
+            
+            area = A * B;
+            aux = (double)area*100/C;
+            if (Integer.parseInt(String.format("%.0f", Math.sqrt(aux))) > Math.sqrt(aux)){
+                System.out.println(String.format("%.0f", (Math.sqrt(aux)-1)));
+            }else{System.out.println(String.format("%.0f", (Math.sqrt(aux))));}
+
+        }
+        input.close();
+    }
+}
