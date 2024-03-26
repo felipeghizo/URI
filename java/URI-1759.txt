@@ -1,0 +1,14 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int N = input.nextInt();
+        for(int i = 0; i < N-1; i++){
+            System.out.print("Ho ");
+        }
+        System.out.println("Ho!");
+        input.close();
+    }
+}
