@@ -1,0 +1,14 @@
+import java.util.Scanner;
+import java.io.IOException;
+
+class Main {
+    public static void main(String[] args) throws IOException {
+        Scanner input = new Scanner(System.in);
+        int x = input.nextInt();
+        input.close();
+        
+        for(int i = 1; i <= 10000; i++){
+            if(i%x==2){System.out.println(i);}
+        }
+    }
+}

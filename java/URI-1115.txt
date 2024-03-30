@@ -1,0 +1,19 @@
+import java.util.Scanner;
+import java.io.IOException;
+
+class Main {
+    public static void main(String[] args) throws IOException {
+        Scanner input = new Scanner(System.in);
+        int X, Y;
+        while (true){
+            X = input.nextInt();
+            Y = input.nextInt();
+            if (X == 0 || Y == 0){ break;}
+            if (X > 0 && Y > 0){System.out.println("primeiro");}
+            else if (X < 0 && Y > 0){System.out.println("segundo");}
+            else if (X < 0 && Y < 0){System.out.println("terceiro");}
+            else if (X > 0 && Y < 0){System.out.println("quarto");}
+        }
+        input.close();
+    }
+}

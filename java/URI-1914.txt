@@ -1,0 +1,30 @@
+import java.util.Scanner;
+import java.io.IOException;
+
+class Main {
+    public static void main(String[] args) throws IOException {
+        Scanner input = new Scanner(System.in);
+        int QT = input.nextInt();
+        int N, M;
+        String J1, J1O, J2, J2O;
+        for(int i = 0; i < QT; i++){
+            J1 = input.next();
+            J1O = input.next();
+            J2 = input.next();
+            J2O = input.next();
+            N = input.nextInt();
+            M = input.nextInt();
+            // par
+            if ((N + M)%2 == 0){
+                if (J1O.compareTo("PAR") == 0){System.out.println(J1);}
+                else{System.out.println(J2);}
+            }
+            // impar
+            else{
+                if (J1O.compareTo("IMPAR") == 0){System.out.println(J1);}
+                else{System.out.println(J2);}
+            }
+        }
+        input.close();
+    }
+}

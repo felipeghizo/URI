@@ -1,0 +1,13 @@
+import java.util.Scanner;
+import java.io.IOException;
+
+class Main {
+    public static void main(String[] args) throws IOException {
+        Double Preco[] = {4.0, 4.5, 5.0, 2.0, 1.5};
+        Scanner input = new Scanner(System.in);
+        int A = input.nextInt();
+        int B = input.nextInt();
+        input.close();
+        System.out.println("Total: R$ " + String.format("%.2f", Preco[A-1]*B));
+    }
+}

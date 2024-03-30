@@ -1,0 +1,19 @@
+import java.util.Scanner;
+import java.util.Arrays;
+import java.io.IOException;
+
+class Main {
+    public static void main(String[] args) throws IOException {
+        int arr[] = new int[3];
+        int aux[] = new int[3];
+        Scanner input = new Scanner(System.in);
+        for (int i = 0; i < 3; i++){arr[i] = input.nextInt(); aux[i] = arr[i];}
+        input.close();
+        
+        Arrays.sort(arr);
+        for (int i = 0; i < 3; i++){System.out.println(arr[i]);}
+        System.out.println();
+        
+        for (int i = 0; i < 3; i++){System.out.println(aux[i]);}
+    }
+}

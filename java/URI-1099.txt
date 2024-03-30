@@ -1,0 +1,21 @@
+import java.util.Scanner;
+import java.io.IOException;
+
+class Main {
+    public static void main(String[] args) throws IOException {
+        Scanner input = new Scanner(System.in);
+        int X, Y, som, aux;
+        int N = input.nextInt();
+        for(int i = 0; i < N; i++){
+            X = input.nextInt();
+            Y = input.nextInt();
+            if (X > Y){aux = X; X = Y; Y = aux;}
+            som = 0;
+            for(int j = X+1; j < Y; j++){
+                if(j%2!=0){som += j;}
+            }
+            System.out.println(som);
+        }
+        input.close();
+    }
+}

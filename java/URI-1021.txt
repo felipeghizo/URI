@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.io.IOException;
+
+class Main {
+    public static void main(String[] args) throws IOException {
+        int Notas[] = {100, 50, 20, 10, 5, 2};
+        int Moedas[] = {100, 50, 25, 10, 05, 1};
+        Scanner input = new Scanner(System.in);
+        Double QT = input.nextDouble();
+        input.close();
+        
+        // Notas
+        System.out.println("NOTAS:");
+        for(int i = 0; i < Notas.length; i++){
+            System.out.println((int) (QT/Notas[i])+" nota(s) de R$ " + Notas[i] + ".00");
+            QT %= Notas[i];
+        }
+        // Moedas
+        QT = QT * 100;
+        System.out.println("MOEDAS:");
+        for(int j = 0; j < Moedas.length; j++){
+            System.out.println((int) (QT/Moedas[j])+" moeda(s) de R$ " + String.format("%.2f", (Moedas[j]/100.0)));
+            QT %= Moedas[j];
+        }
+
+    }
+}

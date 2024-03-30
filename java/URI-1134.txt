@@ -1,0 +1,22 @@
+import java.util.Scanner;
+import java.io.IOException;
+
+class Main {
+    public static void main(String[] args) throws IOException {
+        Scanner input = new Scanner(System.in);
+        int N;
+        int A = 0, G = 0, D = 0;
+        while (true){
+            N = input.nextInt();
+            if (N == 4){break;}
+            else if(N == 1){A++;}
+            else if(N == 2){G++;}
+            else if(N == 3){D++;}
+        }
+        input.close();
+        System.out.println("MUITO OBRIGADO");
+        System.out.println("Alcool: "+A);
+        System.out.println("Gasolina: "+G);
+        System.out.println("Diesel: "+D);
+    }
+}
